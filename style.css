@@ -12,7 +12,7 @@ span{
 }
 
 #splitter{
-    width: 500px;
+    width: 446px;
     border-radius: 2px;
     border: 1px solid #D5D4D8;
 }
@@ -21,6 +21,7 @@ h3{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: #D5D4D8;
+    font-size: 20px;
 }
 
 #wrapper{
@@ -31,12 +32,13 @@ h3{
 
 #interface{
     padding-left: 52px;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
-#generatePassword{
+#generateButton{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    font-size: 16px;
     color: white;
     display: inline;
     background-color: #10B981;
@@ -45,11 +47,30 @@ h3{
     border-radius: 8px;
     border-style: none;
     text-align: start;
+    padding-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: all .2s ease-in-out;
+}
+
+#generateButton:hover{
+    transform: scale(1.05);
 }
 
 #icon-button{
     text-align: start;
     width: 13%;
+    height: 45%;
+}
+
+#output{
+    padding-left: 52px;
+    padding-top: 20px;
+}
+
+.outputwrapper{
+    position: absolute;
+    display: flex;
 }
 
 .outputfield{
@@ -57,9 +78,10 @@ h3{
     width: 211px;
     height: 39px;
     border-radius: 8px;
-}
-
-.outputwrapper{
-    display: inline;
-    width: 45%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #10B981;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-weight: 600;
 }
