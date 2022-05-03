@@ -4,46 +4,65 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Passwortgenerator by Andy</title>
     <script defer src="./build/bundle.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
 
-<body>
-    <div id="wrapper">
-        <div id="interface">
-            <h1>Generiere ein<br> 
-            <span>zufälliges Passwort</span></h1>
-            <h3>Schluss mit unsicheren Passwörtern</h3>
-            <button id="generateButton" onclick="//generatePasswords()"> <svg id="icon-button" width="96" height="92" viewBox="0 0 96 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M56.9187 0.236819C59.7731 0.907495 61.7143 2.88061 61.7143 5.11144V30.6668L89.1428 30.6668C91.6997 30.6668 94.0442 31.7271 95.225 33.4175C96.4058 35.1079 96.2267 37.1476 94.7604 38.7089L46.7605 89.8196C45.0441 91.6471 41.9358 92.4339 39.0813 91.7632C36.2269 91.0925 34.2857 89.1194 34.2857 86.8886L34.2857 61.3332H6.85716C4.3003 61.3332 1.95581 60.2729 0.775023 58.5825C-0.405761 56.8921 -0.226691 54.8524 1.23957 53.2911L49.2395 2.18043C50.9559 0.352868 54.0642 -0.433856 56.9187 0.236819Z" fill="white"/>
-                </svg>
-                 Passwörter erstellen</button>
+<body id="css-selector">
+    <!-- OuterGrid -->
+<div id="interface-wrapper">
+    <!-- InnerGrid -->
+    <div id="interface-spacing">
+        <h1>Passwortgenerator</h1>
+        <!-- Passwortstärkenanzeige -->
+        <h2 id="passwortstaerke">Passwortstärke</h2>
+        <div class="optionwrapper-inputfield">
+            <input type="range" class="strength-design" min="1" max="100">
+            <span id="strength-indicator">Schwach</span>
         </div>
-        <hr id="splitter">
-        <div id="output">
-            <div class="output-wrapper">
-                <div class="outputfield">
-                    <p>00000000000</p>
-                </div>
-                <div class="outputfield">
-                    <p>00000000000</p>
-                </div>
-            </div>
-            <div class="output-wrapper">
-                <div class="outputfield">
-                    <p>00000000000</p>
-                </div>
-                <div class="outputfield">
-                    <p>00000000000</p>
-                </div>
-            </div>
-
-            </div>
+         <!-- Passwortausgabefeld -->
+         <h2>Dein Passwort</h2>
+         <div id="outputfield" onclick="copyToClipboard()">
+             <h4>123456789101234567891012345678910</h4>
+         </div>
+        <hr id="trenner">
+        <!-- Passwortlänge -->
+        <h2>Passwortlänge</h2> 
+        <div class="optionwrapper-inputfield">
+            <span>1</span>
+            <input type="range" id="pw-length" min="4" max="30"> 
+            <span>30</span>
+        </div>
+        <!-- Einstellungen -->
+        <h2>Einstellungen</h2>
+        <div class="optionwrapper-checkbox">
+            <h3>Großbuchstaben</h3> <input type="checkbox" class="pw-settings" onclick="addUppercase()"> 
+        </div>
+        <div class="optionwrapper-checkbox">
+            <h3>Kleinbuchstaben</h3> <input type="checkbox" class="pw-settings" onclick="addLowercase()"> 
+        </div>
+        <div class="optionwrapper-checkbox">
+            <h3>Sonderzeichen</h3> <input type="checkbox" class="pw-settings" onclick="addSymbols()"> 
+        </div>
+        <div class="optionwrapper-checkbox">
+            <h3>Zahlen</h3> <input type="checkbox" class="pw-settings" onclick="addNumbers()"> 
+        </div>
+        <h2>Soll enthalten:</h2> 
+        <div class="optionwrapper-inputfield">
+            <input type="text" id="pw-text" min="1" max="30"> 
+            <button id="addCustomText" onclick="addCustomText()">Einfügen</button>
+        </div>
+        <hr id="trenner">
+        <!-- Generate Button -->
+        <div id="button-wrapper">
+        <button id="generatePassword" onclick="generatePassword()">
+           <h3>Passwort generieren!</h3>
+        </button> 
         </div>
     </div>
-    <!-- <my-beispiel></my-beispiel>
-         <input type="text" id="myInput" /> -->
+</div>
+   
 </body>
 
 </html>

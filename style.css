@@ -4,84 +4,225 @@ h1{
     font-family: 'Karla', sans-serif;
     color: white;
     font-weight: 800;
-    font-size: 40px;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
 }
 
-span{
-    color: #10B981;
-}
-
-#splitter{
-    width: 446px;
-    border-radius: 2px;
-    border: 1px solid #D5D4D8;
+h2{
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 1.125rem;
+    margin-top: 2vh;
 }
 
 h3{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #D5D4D8;
-    font-size: 20px;
+    color: white;
+    font-size: 0.938rem;
 }
 
-#wrapper{
-    background-color: #1F2937;
-    width: 550px;
-    height: 550px;
-}
-
-#interface{
-    padding-left: 52px;
-    padding-top: 50px;
-}
-
-#generateButton{
+h4{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 16px;
     color: white;
-    display: inline;
-    background-color: #10B981;
-    height: 42px;
-    width: 223px;
+    font-size: 1.1rem;
+}
+
+
+span{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    color: white;
+    font-size: 0.938rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+/* Gradientcode von https://www.gradient-animator.com/ */
+    background: linear-gradient(224deg, #243166, #2ac0d9, #8b2ad9, #430b69, #0076ff);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: background-gradient 59s ease infinite;
+    -moz-animation: background-gradient 59s ease infinite;
+    -o-animation: background-gradient 59s ease infinite;
+    animation: background-gradient 59s ease infinite;
+}
+/* Gradientcode von https://www.gradient-animator.com/ */
+@-webkit-keyframes background-gradient {
+    0%{background-position:0% 86%}
+    50%{background-position:100% 15%}
+    100%{background-position:0% 86%}
+}
+@-moz-keyframes background-gradient {
+    0%{background-position:0% 86%}
+    50%{background-position:100% 15%}
+    100%{background-position:0% 86%}
+}
+@-o-keyframes background-gradient {
+    0%{background-position:0% 86%}
+    50%{background-position:100% 15%}
+    100%{background-position:0% 86%}
+}
+@keyframes background-gradient {
+    0%{background-position:0% 86%}
+    50%{background-position:100% 15%}
+    100%{background-position:0% 86%}
+}
+
+
+#interface-wrapper{
+    background-color: #0b1e38;
+    height: 90vh;
+    width: 25vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 3vh;
+    padding-bottom: 2vh;
+}
+
+#interface-spacing{
+    height: 72vh;
+    width: 20vw;
+}
+
+.optionwrapper-inputfield{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.optionwrapper-checkbox{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #102a4c;
+    border-radius: 12px;
+    margin-bottom: 1vh;
+    padding-left: 2vh;
+    height: 5vh;
+}
+
+#pw-length{
+    margin-left: 1vh;
+    margin-right: 1vh;
+    width: 80vw;
+    height: 3vh;
+    border-radius: 12px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pw-settings{
+    width: 5vw;
+    height: 2vh;
+    margin-right: 1vw;
+    border-radius: 12px;
+    border-style: none;
+    display: flex;
+    justify-content: end;
+}
+
+#trenner{
+    border-top: 3px solid;
+    border-radius: 10px;
+    border-color: #005CC8;
+    margin-top: 2vh;
+}
+
+.strength-design{
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 15px;
+    transition: all ease-in 0.25s;
+}
+
+.strength-design::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    position:relative;
+    width: 4px;
+    height: 15px;
+  }
+
+#strength-indicator{
+    margin-left: 2vh;
+}
+
+#pw-text{
+    width: 80%;
+    height: 3vh;
     border-radius: 8px;
     border-style: none;
-    text-align: start;
-    padding-left: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    color: #0b1e38;
+    font-size: 15px;
+    padding-left: 0.5vw;
+    margin-right: 0.5vw;
+    -moz-box-shadow:    inset 0px 0px 5px #0b1e38;
+    -webkit-box-shadow: inset 0px 0px 5px #0b1e38;
+    box-shadow:         inset 0px 0px 5px #0b1e38;
+}
+
+#addCustomText{
+    border-radius: 5px;
+    border-style: none;
+    height: 3vh;
+    width: 5vw;
+    margin-left: 0.1vw;
+    transition: all .2s ease-in-out;
+    background-color: #005CC8;
+    color: white;
     transition: all .2s ease-in-out;
 }
 
-#generateButton:hover{
+#addCustomText:hover{
     transform: scale(1.05);
 }
 
-#icon-button{
-    text-align: start;
-    width: 13%;
-    height: 45%;
-}
-
-#output{
-    padding-left: 52px;
-    padding-top: 20px;
-}
-
-.outputwrapper{
-    position: absolute;
+#outputfield{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #005cc8;
+    border-radius: 12px;
+    height: 8vh;
+    -moz-box-shadow:    inset 0 0 10px #0b1e38;
+    -webkit-box-shadow: inset 0 0 10px #0b1e38;
+    box-shadow:         inset 0 0 10px #0b1e38;
 }
 
-.outputfield{
-    background-color: #273549;
-    width: 211px;
-    height: 39px;
-    border-radius: 8px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #10B981;
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-    font-weight: 600;
+#generatePassword{
+    border-radius: 15px;
+    border-style: none;
+    width: 100vh;
+    transition: all .2s ease-in-out;
+    background: rgb(9,9,121);
+    background: linear-gradient(39deg, rgba(9,9,121,1) 0%, rgba(9,9,121,1) 14%, rgba(0,236,255,1) 100%);
+}
+
+#button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    margin-top: 2vh;
+}
+
+#generatePassword:hover{
+    transform: scale(1.05);
 }
