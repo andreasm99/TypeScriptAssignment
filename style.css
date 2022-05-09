@@ -44,7 +44,7 @@ body{
     justify-content: center;
     align-items: center;
 
-/* Gradientcode von https://www.gradient-animator.com/ */
+/* QUELLE: Gradientcode von https://www.gradient-animator.com/ */
     background: linear-gradient(224deg, #243166, #2ac0d9, #8b2ad9, #430b69, #0076ff);
     background-size: 1000% 1000%;
 
@@ -53,7 +53,7 @@ body{
     -o-animation: background-gradient 59s ease infinite;
     animation: background-gradient 59s ease infinite;
 }
-/* Gradientcode von https://www.gradient-animator.com/ */
+/* QUELLE: Gradientcode von https://www.gradient-animator.com/ */
 @-webkit-keyframes background-gradient {
     0%{background-position:0% 86%}
     50%{background-position:100% 15%}
@@ -139,15 +139,16 @@ body{
     margin-top: 2vh;
 }
 
-.strengthDesign{
+.strengthDesignSchwach{
     width: 100%;
     -webkit-appearance: none;
     appearance: none;
     border-radius: 15px;
     transition: all ease-in 0.25s;
+    background: #ce0000;
 }
 
-.strengthDesign::-webkit-slider-thumb{
+.strengthDesignSchwach::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
     border-radius: 0;
@@ -156,6 +157,65 @@ body{
     width: 4px;
     height: 10px;
 }
+
+.strengthDesignOkay{
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 15px;
+    transition: all ease-in 0.25s;
+    background: #f47a00;
+}
+
+.strengthDesignOkay::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    position:relative;
+    width: 4px;
+    height: 10px;
+}
+
+.strengthDesignGut{
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 15px;
+    transition: all ease-in 0.25s;
+    background: #f5f900;
+}
+
+.strengthDesignGut::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    position:relative;
+    width: 4px;
+    height: 10px;
+}
+
+.strengthDesignStark{
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 15px;
+    transition: all ease-in 0.25s;
+    background: #04f900;
+}
+
+.strengthDesignStark::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    position:relative;
+    width: 4px;
+    height: 10px;
+}
+
+
 
 #strengthIndicator{
     margin-left: 2vh;
@@ -176,22 +236,6 @@ body{
     -moz-box-shadow:    inset 0px 0px 5px #0b1e38;
     -webkit-box-shadow: inset 0px 0px 5px #0b1e38;
     box-shadow:         inset 0px 0px 5px #0b1e38;
-}
-
-#addCustomText{
-    border-radius: 5px;
-    border-style: none;
-    height: 3vh;
-    width: 5vw;
-    margin-left: 0.1vw;
-    transition: all .2s ease-in-out;
-    background-color: #005CC8;
-    color: white;
-    transition: all .2s ease-in-out;
-}
-
-#addCustomText:hover{
-    transform: scale(1.05);
 }
 
 #outputfield{

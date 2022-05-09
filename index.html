@@ -18,13 +18,13 @@
         <!-- Passwortstärkenanzeige -->
         <h2 id="passwortstaerke">Passwortstärke</h2>
         <div class="optionwrapperInputfield">
-            <input type="range" class="strengthDesign" min="1" max="100">
+            <input type="range" id="strengthBar" class="strengthDesignSchwach" min="1" max="100">
             <span id="strengthIndicator">Schwach</span>
         </div>
          <!-- Passwortausgabefeld -->
          <h2>Dein Passwort</h2>
          <div id="outputfield" onclick="copyToClipboard()">
-             <div id="outputFinal">123456789101234567891012345678910</div>
+             <div id="outputFinal">Dein Passwort</div>
          </div>
         <hr id="trenner">
         <!-- Passwortlänge -->
@@ -38,24 +38,23 @@
         <h2>Einstellungen</h2>
         <div class="optionwrapperCheckbox">
             <h3>Großbuchstaben</h3> 
-            <input type="checkbox" id="uppercase" class="settings" onclick="addUppercase()"> 
+            <input type="checkbox" id="uppercase" class="settings"> 
         </div>
         <div class="optionwrapperCheckbox">
             <h3>Kleinbuchstaben</h3> 
-            <input type="checkbox" id="lowercase" class="settings" onclick="addLowercase()"> 
+            <input type="checkbox" id="lowercase" class="settings"> 
         </div>
         <div class="optionwrapperCheckbox">
             <h3>Sonderzeichen</h3> 
-            <input type="checkbox" id="symbols" class="settings" onclick="addSymbols()"> 
+            <input type="checkbox" id="symbols" class="settings"> 
         </div>
         <div class="optionwrapperCheckbox">
             <h3>Zahlen</h3> 
-            <input type="checkbox" id="numbers" class="settings" onclick="addNumbers()"> 
+            <input type="checkbox" id="numbers" class="settings"> 
         </div>
         <h2>Soll enthalten:</h2> 
         <div class="optionwrapperInputfield">
             <input type="text" id="pwText" min="1" max="30"> 
-            <button id="addCustomText" onclick="addCustomText()">Einfügen</button>
         </div>
         <hr id="trenner">
         <!-- Generate Button -->
