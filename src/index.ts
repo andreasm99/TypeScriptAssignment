@@ -99,4 +99,56 @@ function generatePassword(){
     }
 
     output.innerText = generatedPassword;
+
+    // Passwortstärkenanzeige
+    let uppercasePoints = 0;
+    let lowercasePoints = 0;
+    let symbolsPoints = 0;
+    let numbersPoints = 0;
+
+    if (uppercase){
+      uppercasePoints += 5;
+    }
+    if (lowercase){
+      lowercasePoints += 5;
+    }
+    if (symbols){
+      symbolsPoints += 5;
+    }
+    if (numbers){
+      numbersPoints += 5;
+    }
+
+    let strengthPoints = uppercasePoints + lowercasePoints + symbolsPoints + numbersPoints + parseInt(length);
+
+  if (strengthPoints <= 15){
+    strengthBar.className = "strengthDesignSchwach";
+    strengthIndicator.innerText = "Schwach";
+  }
+  else if (strengthPoints >= 38){
+    strengthBar.className = "strengthDesignStark"
+    strengthIndicator.innerText = "Stark";
+  }
+  else if (strengthPoints >= 26){
+    strengthBar.className = "strengthDesignGut"
+    strengthIndicator.innerText = "Gut";
+  } 
+  else if (strengthPoints >= 16){
+    strengthBar.className = "strengthDesignOkay";
+    strengthIndicator.innerText = "Okay";
+  }  
+}
+
+// In Zwischenablage kopieren funktion
+// Hilfe von https://stackabuse.com/how-to-copy-to-clipboard-in-javascript-with-the-clipboard-api/
+const copyDiv = document.getElementById("outputfield") as HTMLDivElement;
+copyDiv.addEventListener("click", copyToClipboard);
+
+function copyToClipboard(){
+    var copyPassword = document.getElementById("outputFinal") as HTMLDivElement;
+    let toCopy = '';
+    toCopy = copyPassword.innerHTML;
+    navigator.clipboard.writeText(toCopy).then(() => {
+        alert("Passwort erfolgreich kopiert!");
+    });
 }

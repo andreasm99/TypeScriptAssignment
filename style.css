@@ -31,7 +31,6 @@ h3{
     font-size: 1.1rem;
 }
 
-
 span{
     font-family: 'Inter', sans-serif;
     font-weight: 200;
@@ -74,7 +73,6 @@ body{
     50%{background-position:100% 15%}
     100%{background-position:0% 86%}
 }
-
 
 #interfaceWrapper{
     background-color: #0b1e38;
@@ -183,7 +181,7 @@ body{
     appearance: none;
     border-radius: 15px;
     transition: all ease-in 0.25s;
-    background: #f5f900;
+    background: #cbf900;
 }
 
 .strengthDesignGut::-webkit-slider-thumb{
@@ -202,7 +200,7 @@ body{
     appearance: none;
     border-radius: 15px;
     transition: all ease-in 0.25s;
-    background: #04f900;
+    background: #04ff00;
 }
 
 .strengthDesignStark::-webkit-slider-thumb{
@@ -214,8 +212,6 @@ body{
     width: 4px;
     height: 10px;
 }
-
-
 
 #strengthIndicator{
     margin-left: 2vh;
@@ -269,4 +265,8 @@ body{
 
 #generatePassword:hover{
     transform: scale(1.03);
+}
+
+#outputfield:hover{
+    cursor: copy;
 }
