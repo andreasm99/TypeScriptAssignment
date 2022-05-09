@@ -11,52 +11,56 @@
 
 <body id="css-selector">
     <!-- OuterGrid -->
-<div id="interface-wrapper">
+<div id="interfaceWrapper">
     <!-- InnerGrid -->
-    <div id="interface-spacing">
+    <div id="interfaceSpacing">
         <h1>Passwortgenerator</h1>
         <!-- Passwortstärkenanzeige -->
         <h2 id="passwortstaerke">Passwortstärke</h2>
-        <div class="optionwrapper-inputfield">
-            <input type="range" class="strength-design" min="1" max="100">
-            <span id="strength-indicator">Schwach</span>
+        <div class="optionwrapperInputfield">
+            <input type="range" class="strengthDesign" min="1" max="100">
+            <span id="strengthIndicator">Schwach</span>
         </div>
          <!-- Passwortausgabefeld -->
          <h2>Dein Passwort</h2>
          <div id="outputfield" onclick="copyToClipboard()">
-             <h4>123456789101234567891012345678910</h4>
+             <div id="outputFinal">123456789101234567891012345678910</div>
          </div>
         <hr id="trenner">
         <!-- Passwortlänge -->
-        <h2>Passwortlänge</h2> 
-        <div class="optionwrapper-inputfield">
+        <h2>Passwortlänge: <span id="lengthIndicator">15</span></h2>
+        <div class="optionwrapperInputfield">
             <span>1</span>
-            <input type="range" id="pw-length" min="4" max="30"> 
+            <input type="range" id="pwLength" min="4" max="30" value="15"> 
             <span>30</span>
         </div>
         <!-- Einstellungen -->
         <h2>Einstellungen</h2>
-        <div class="optionwrapper-checkbox">
-            <h3>Großbuchstaben</h3> <input type="checkbox" class="pw-settings" onclick="addUppercase()"> 
+        <div class="optionwrapperCheckbox">
+            <h3>Großbuchstaben</h3> 
+            <input type="checkbox" id="uppercase" class="settings" onclick="addUppercase()"> 
         </div>
-        <div class="optionwrapper-checkbox">
-            <h3>Kleinbuchstaben</h3> <input type="checkbox" class="pw-settings" onclick="addLowercase()"> 
+        <div class="optionwrapperCheckbox">
+            <h3>Kleinbuchstaben</h3> 
+            <input type="checkbox" id="lowercase" class="settings" onclick="addLowercase()"> 
         </div>
-        <div class="optionwrapper-checkbox">
-            <h3>Sonderzeichen</h3> <input type="checkbox" class="pw-settings" onclick="addSymbols()"> 
+        <div class="optionwrapperCheckbox">
+            <h3>Sonderzeichen</h3> 
+            <input type="checkbox" id="symbols" class="settings" onclick="addSymbols()"> 
         </div>
-        <div class="optionwrapper-checkbox">
-            <h3>Zahlen</h3> <input type="checkbox" class="pw-settings" onclick="addNumbers()"> 
+        <div class="optionwrapperCheckbox">
+            <h3>Zahlen</h3> 
+            <input type="checkbox" id="numbers" class="settings" onclick="addNumbers()"> 
         </div>
         <h2>Soll enthalten:</h2> 
-        <div class="optionwrapper-inputfield">
-            <input type="text" id="pw-text" min="1" max="30"> 
+        <div class="optionwrapperInputfield">
+            <input type="text" id="pwText" min="1" max="30"> 
             <button id="addCustomText" onclick="addCustomText()">Einfügen</button>
         </div>
         <hr id="trenner">
         <!-- Generate Button -->
-        <div id="button-wrapper">
-        <button id="generatePassword" onclick="generatePassword()">
+        <div id="buttonWrapper">
+        <button id="generatePassword">
            <h3>Passwort generieren!</h3>
         </button> 
         </div>
