@@ -1,3 +1,4 @@
+/* Schrift styling*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Karla:wght@800&display=swap');
 
 h1{
@@ -37,7 +38,7 @@ span{
     color: white;
     font-size: 0.938rem;
 }
-
+/* Body & Background */
 body{
     display: flex;
     justify-content: center;
@@ -74,6 +75,13 @@ body{
     100%{background-position:0% 86%}
 }
 
+#trenner{
+    border-top: 3px solid;
+    border-radius: 10px;
+    border-color: #005CC8;
+    margin-top: 2vh;
+}
+
 #interfaceWrapper{
     background-color: #0b1e38;
     height: 90vh;
@@ -91,6 +99,7 @@ body{
     width: 20vw;
 }
 
+/* Einstellungen Styling */
 .optionwrapperInputfield{
     display: flex;
     justify-content: center;
@@ -100,7 +109,7 @@ body{
 
 .optionwrapperCheckbox{
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     background-color: #102a4c;
     border-radius: 12px;
@@ -130,13 +139,7 @@ body{
     justify-content: end;
 }
 
-#trenner{
-    border-top: 3px solid;
-    border-radius: 10px;
-    border-color: #005CC8;
-    margin-top: 2vh;
-}
-
+/* Passwortstärkenanzeige */
 .strengthDesignSchwach{
     width: 100%;
     -webkit-appearance: none;
@@ -214,11 +217,13 @@ body{
 }
 
 #strengthIndicator{
-    margin-left: 2vh;
+    margin-left: 2vw;
 }
 
+/* Output & Sonstiges */
+
 #pwText{
-    width: 80%;
+    width: 100%;
     height: 3vh;
     border-radius: 8px;
     border-style: none;
@@ -252,7 +257,7 @@ body{
     width: 100vh;
     transition: all .2s ease-in-out;
     background: rgb(9,9,121);
-    background: linear-gradient(39deg, rgba(9,9,121,1) 0%, rgba(9,9,121,1) 14%, rgba(0,236,255,1) 100%);
+    background: linear-gradient(39deg, rgba(9,9,121,1) 0%, rgba(9,9,121,1) 14%, rgba(0,236,255,1) 100%); /* Verlauf von https://cssgradient.io/*/
 }
 
 #buttonWrapper{
