@@ -53,14 +53,16 @@ function generatePassword(){
 
     let passwordLength = parseInt(length);
 
-    // Passwortlänge minus des selbst eingegebenen Textes, damit die Maximallänge nicht überschritten wird
-    if(pwText.length != 0){
-      passwordLength = passwordLength - pwText.length;
-    }
 
+  // Passwort generieren
     for(let i=0; i<passwordLength; i++){
       generatedPassword += charset.charAt(Math.floor(Math.random() * charset.length));
     }
+
+  // Passwortlänge minus des selbst eingegebenen Textes, damit die Maximallänge nicht überschritten wird
+     if(pwText.length != 0){
+      passwordLength = passwordLength - pwText.length;
+     }    
 
     // Zufälliges aufteilen des Passworts um den eigenen Text dort zu platzieren
     if(pwText.length != 0){
